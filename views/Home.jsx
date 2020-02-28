@@ -3,9 +3,9 @@ import { StyleSheet, Text, View, Button, SafeAreaView } from "react-native";
 import { Emoji } from "emoji-mart-native";
 
 export const HomeView = ({ navigation }) => {
-  const handlePress = useCallback(() => {
+  const handlePress = () => {
     navigation.replace("EmojiPicker");
-  }, [navigation]);
+  };
 
   return (
     <SafeAreaView style={styles.container}>

@@ -14,15 +14,15 @@ import EmojiSelector from "react-native-emoji-selector";
 export const EmojiPickerView = ({ navigation }) => {
   const [chosenEmoji, setEmoji] = useState(null);
 
-  const handleEmojiSelected = useCallback(emoji => {
+  const handleEmojiSelected = emoji => {
     setEmoji(emoji);
-  }, []);
+  };
 
-  const handleContinueButton = useCallback(() => {
+  const handleContinueButton = () => {
     if (chosenEmoji !== null) {
       navigation.replace("Chat", { emoji: chosenEmoji });
     }
-  }, [chosenEmoji, navigation]);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
