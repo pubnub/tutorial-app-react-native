@@ -1,36 +1,24 @@
-# PubNub React Native tutorial app
-
-Welcome! This is the repository containing code used in the article [React Native and Pubnub](#).
-
+# PubNub React Native App
+This repository contains code to build a sample chat app using the [PubNub React Framework](https://www.pubnub.com/docs/chat/react/setup).
 ## Prerequisites
-
-- Node.js at least `v10.0.0` (recommended `v12.0.0`).
-  - You can check your current Node.js version in terminal using command `node -v`.
-- [Expo CLI](https://expo.io/) which you can install using `npm`:
-
-        npm install expo-cli --global
-
-- [PubNub](https://pubnub.com) free account with subscribe and publish key prepared.
-
-## How to run this example
-
-First, clone this repository on your computer:
-
-    git clone https://github.com/pubnub/tutorial-app-react-native.git
-
-Then enter it and install all `npm` dependencies:
-
-    npm install
-
-Change `publishKey` and `subscribeKey` in `App.js` so they match yours.
-Now you can go ahead and start the dev server:
-
-    npm start
-
-Or alternatively:
-
-    expo start
-
-## License
-
-This repository is MIT licensed.
+- [Node.js 10+](https://nodejs.org/en/): make sure that you have a recent version of Node installed. If you are not sure, just type this in your terminal `node --version`.
+- [Expo CLI](https://expo.io/): you can install expo-cli using npm.
+```bash
+npm install expo-cli --global
+```
+- [PubNub Account](https://dashboard.pubnub.com/): create a free account with PubNub and obtain your publish and subscribe keys.
+## Running the project
+1. Clone the repository.
+```bash
+git clone https://github.com/pubnub/tutorial-app-react-native.git
+```
+2. Install npm dependencies:
+```bash
+npm install
+```
+3. Change `publishKey` and `subscribeKey` for your app in `App.js` and start the dev server.
+```bash
+npm start
+```
+## Further Information
+For more information about this project, or how to create an app using PubNub, please check out the [PubNub Documentation](https://www.pubnub.com/docs).
