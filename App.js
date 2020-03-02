@@ -10,8 +10,8 @@ import { EmojiPickerView } from "./views/EmojiPicker";
 import { ChatView } from "./views/Chat";
 
 const pubnub = new PubNub({
-  subscribeKey: "sub-c-3db4039e-42a7-11ea-be28-ae0ede4a022d",
-  publishKey: "pub-c-c3385e75-c2a9-440d-b6f5-50b2259ab973",
+  subscribeKey: "demo",
+  publishKey: "demo",
   uuid: "0"
 });
 

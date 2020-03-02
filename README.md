@@ -22,6 +22,7 @@ Then enter it and install all `npm` dependencies:
 
     npm install
 
+Change `publishKey` and `subscribeKey` in `App.js` so they match yours.
 Now you can go ahead and start the dev server:
 
     npm start
