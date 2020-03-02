@@ -13,14 +13,27 @@ import {
 import { usePubNub } from "pubnub-react";
 
 export const ChatView = ({ route }) => {
+  // The `route` prop will be bassed to us thanks to React Navigation.
+  // It will contain our emoji in `route.params.emoji`.
+  const userEmoji = route.params.emoji;
+
+  // Here we obtain our PubNub instance thanks to using the provider
   const pubnub = usePubNub();
+
+  // In next two statements we define the state needed for our chat
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
 
+  // First we need to set our PubNub UUID and subscribe to chat channel.
+  // We will use `useEffect` hook for that.
   useEffect(() => {
+    // We need to make sure that PubNub is defined
     if (pubnub) {
-      pubnub.setUUID(route.params.emoji);
+      // Set the UUID of our user to their chosen emoji
+      pubnub.setUUID(userEmoji);
 
+      // Create a listener that will push new messages to our `messages` variable
+      // using the `setMessages` function.
       const listener = {
         message: envelope => {
           setMessages(msgs => [
@@ -35,9 +48,11 @@ export const ChatView = ({ route }) => {
         }
       };
 
+      // Add the listener to pubnub instance and subscribe to `chat` channel.
       pubnub.addListener(listener);
       pubnub.subscribe({ channels: ["chat"] });
 
+      // We need to return a function that will handle unsubscription on unmount
       return () => {
         pubnub.removeListener(listener);
         pubnub.unsubscribeAll();
@@ -45,17 +60,20 @@ export const ChatView = ({ route }) => {
     }
   }, [pubnub]);
 
+  // This function handles sending messages.
   const handleSubmit = () => {
+    // Clear the input field.
     setInput("");
 
+    // Create the message with random `id`.
     const message = {
       content: input,
       id: Math.random()
         .toString(16)
         .substr(2)
     };
-    Keyboard.dismiss();
 
+    // Publish our message to the channel `chat`
     pubnub.publish({ channel: "chat", message });
   };
 

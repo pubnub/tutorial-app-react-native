@@ -3,12 +3,17 @@ import { StyleSheet, Text, SafeAreaView, Button, View } from "react-native";
 import EmojiSelector from "react-native-emoji-selector";
 
 export const EmojiPickerView = ({ navigation }) => {
+  // In here we are soring our currently picked emoji.
   const [chosenEmoji, setEmoji] = useState(null);
 
+  // This method will be called when our user selects an emoji
   const handleEmojiSelected = emoji => {
     setEmoji(emoji);
   };
 
+  // This method will be called when our user wants to continue with
+  // currently selected emoji - this method will do nothing if user
+  // didn't pick an emoji.
   const handleContinueButton = () => {
     if (chosenEmoji !== null) {
       navigation.replace("Chat", { emoji: chosenEmoji });
@@ -30,6 +35,7 @@ export const EmojiPickerView = ({ navigation }) => {
           <Text style={styles.emoji}>{chosenEmoji || ""}</Text>
         </View>
         <Button
+          // If user haven't chosen an emoji, we disable the continue button
           disabled={chosenEmoji === null}
           style={styles.continueButton}
           title="Continue"
