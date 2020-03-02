@@ -1,14 +1,5 @@
-import React, { useCallback } from "react";
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  Button,
-  TextInput,
-  View
-} from "react-native";
-
-import { useState } from "react";
+import React, { useState } from "react";
+import { StyleSheet, Text, SafeAreaView, Button, View } from "react-native";
 import EmojiSelector from "react-native-emoji-selector";
 
 export const EmojiPickerView = ({ navigation }) => {

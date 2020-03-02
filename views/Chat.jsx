@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,8 +10,6 @@ import {
   Platform,
   Keyboard
 } from "react-native";
-import { useState } from "react";
-import { useEffect } from "react";
 import { usePubNub } from "pubnub-react";
 
 export const ChatView = ({ route }) => {

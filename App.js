@@ -6,7 +6,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import PubNub from "pubnub";
 import { PubNubProvider } from "pubnub-react";
 
-import { HomeView } from "./views/Home";
 import { EmojiPickerView } from "./views/EmojiPicker";
 import { ChatView } from "./views/Chat";
 
@@ -25,7 +24,6 @@ export default function App() {
     <NavigationContainer>
       <PubNubProvider client={pubnub}>
         <Stack.Navigator headerMode="none">
-          <Stack.Screen name="Home" component={HomeView} />
           <Stack.Screen name="EmojiPicker" component={EmojiPickerView} />
           <Stack.Screen name="Chat" component={ChatView} />
         </Stack.Navigator>

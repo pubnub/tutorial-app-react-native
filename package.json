@@ -11,8 +11,6 @@
     "@react-native-community/masked-view": "0.1.5",
     "@react-navigation/native": "^5.0.7",
     "@react-navigation/stack": "^5.0.8",
-    "emoji-mart": "^2.11.2",
-    "emoji-mart-native": "^0.5.0-beta",
     "expo": "~36.0.0",
     "pubnub": "^4.27.3",
     "pubnub-react": "^2.0.0",
