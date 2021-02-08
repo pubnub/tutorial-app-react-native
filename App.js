@@ -15,7 +15,6 @@ const pubnub = new PubNub({
   uuid: "0"
 });
 
-console.disableYellowBox = true;
 
 const Stack = createStackNavigator();
 
