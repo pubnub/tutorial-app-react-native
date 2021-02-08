@@ -1,5 +1,6 @@
 import "react-native-gesture-handler";
 import React from "react";
+import { LogBox } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -15,7 +16,7 @@ const pubnub = new PubNub({
   uuid: "0"
 });
 
-console.disableYellowBox = true;
+LogBox.ignoreLogs(['Setting a timer', 'deprecated global'])
 
 const Stack = createStackNavigator();
 
