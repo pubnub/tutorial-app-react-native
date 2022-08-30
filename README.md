@@ -1,4 +1,11 @@
 # PubNub React Native App
+
+**This application was developed in March 2020** and has not been updated since that time.  The version of React, React Native, Expo and other dependencies reflect when this app was first created.  For more recent React Native content, please refer to the following resources:
+* The [React Native Tutorial](https://pubnub.com/tutorials/getting-started-chat-sdk-react-native/) and accompanying [sample app](https://github.com/PubNubDevelopers/GettingStarted-ReactNative-SDK-Tutorial)
+* The [React Native Getting Started documentation](https://www.pubnub.com/docs/sdks/javascript/react/getting-started-react-native) and the accompanying [sample app](https://github.com/pubnub/react/tree/master/examples/reactnative)
+
+-----------------
+
 This repository contains code to build a sample chat app using the [PubNub React Framework](https://www.pubnub.com/docs/chat/react/setup).
 ## Prerequisites
 - [Node.js 10+](https://nodejs.org/en/): make sure that you have a recent version of Node installed. If you are not sure, just type this in your terminal `node --version`.
